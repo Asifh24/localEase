@@ -166,10 +166,7 @@ const filtered = useMemo(() => {
     return <Admin />;
   }
 
-  if (
-  window.location.pathname === "/" ||
-  window.location.pathname === "/login"
-) {
+ if (window.location.pathname === "/login") {
   return <Login />;
 }
 
