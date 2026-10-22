@@ -44,14 +44,17 @@ export default function App() {
   const [bookingDone, setBookingDone] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [sort, setSort] = useState("Recommended");
-  if (window.location.pathname === "/admin") {
+if (window.location.pathname === "/admin") {
   return <Admin />;
+}
+
+if (window.location.pathname === "/") {
+  return <Login />;
 }
 
 if (window.location.pathname === "/login") {
   return <Login />;
 }
-  
   
 
   const filtered = useMemo(() => {
