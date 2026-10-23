@@ -161,14 +161,16 @@ const filtered = useMemo(() => {
 
   }
 
-  // Route to the admin dashboard or login page when requested.
+  // Login first on the main URL; admin has its own dashboard.
   if (window.location.pathname === "/admin") {
     return <Admin />;
   }
 
- if (window.location.pathname === "/login") {
-  return <Login />;
-}
+  if (window.location.pathname === "/" || window.location.pathname === "/login") {
+    return <Login />;
+  }
+
+  // The existing homepage JSX below is rendered at /home.
 
 return (
 

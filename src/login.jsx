@@ -43,7 +43,7 @@ function handleSubmit(e) {
       enteredEmail === customerEmail &&
       password === customerPassword
     ) {
-      window.location.href = "/";
+      window.location.href = "/home";
     } else {
       alert("Invalid customer email or password!");
     }
